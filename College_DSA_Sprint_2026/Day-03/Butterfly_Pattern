@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    // Upper half (rows 1 to n-1)
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+            cout << "*";
+        for (int j = 1; j <= (2 * n - 1) - 2 * i; j++)
+            cout << " ";
+        for (int j = 1; j <= i; j++)
+            cout << "*";
+        cout << "\n";
+    }
+
+    // Middle row
+    for (int j = 1; j <= 2 * n - 1; j++)
+        cout << "*";
+    cout << "\n";
+
+    // Lower half (n-1 down to n-95 or 1, whichever is bigger)
+    int stop = max(1, n - 95);
+    for (int i = n - 1; i >= stop; i--)
+    {
+        for (int j = 1; j <= i; j++)
+            cout << "*";
+        for (int j = 1; j <= (2 * n - 1) - 2 * i; j++)
+            cout << " ";
+        for (int j = 1; j <= i; j++)
+            cout << "*";
+        if (i > stop)
+            cout << "\n";
+    }
+
+    return 0;
+}

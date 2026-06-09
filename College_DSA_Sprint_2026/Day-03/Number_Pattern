@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Solution
+{
+public:
+    vector<int> printPat(int n)
+    {
+        vector<int> result;
+
+        for (int i = n; i >= 1; i--)
+        {
+            // Each number j repeated i times
+            for (int j = n; j >= 1; j--)
+            {
+                for (int k = 1; k <= i; k++)
+                {
+                    result.push_back(j);
+                }
+            }
+            result.push_back(-1);
+        }
+
+        return result;
+    }
+};
