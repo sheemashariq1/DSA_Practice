@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    vector<int> removeDuplicates(vector<int> &arr)
+    {
+        // code here
+        int index = 0;
+        if (arr.empty())
+        {
+            return arr;
+        }
+        for (int i = 1; i < arr.size(); i++)
+        {
+            if (arr[i] != arr[index])
+            {
+                index++;
+                arr[index] = arr[i];
+            }
+        }
+        int count = index + 1;
+        while (arr.size() > count)
+        {
+            arr.pop_back();
+        }
+        return arr;
+    }
+};
