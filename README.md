@@ -32,3 +32,4 @@ Topic-wise solutions following Striver's A2Z DSA Sheet.
 ## 🌐 Connect
 - [LinkedIn](https://www.linkedin.com/in/sheema-shariq-436678366)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/profile/sheemash17x8)
+- [LeetCode](https://leetcode.com/u/SHEEMA_SHARIQ)
