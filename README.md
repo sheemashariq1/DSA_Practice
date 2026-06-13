@@ -1,3 +1,9 @@
+  _________.__                                          _________.__                 .__        
+ /   _____/|  |__   ____   ____   _____ _____          /   _____/|  |__ _____ _______|__| ______
+ \_____  \ |  |  \_/ __ \_/ __ \ /     \\__  \         \_____  \ |  |  \\__  \\_  __ \  |/ ____/
+ /        \|   Y  \  ___/\  ___/|  Y Y  \/ __ \_       /        \|   Y  \/ __ \|  | \/  < <_|  |
+/_______  /|___|  /\___  >\___  >__|_|  (____  /      /_______  /|___|  (____  /__|  |__|\__   |
+        \/      \/     \/     \/      \/     \/               \/      \/     \/             |__|
 # DSA Practice 🚀
 A structured repository for my complete DSA journey —
 college coursework and Striver's A2Z sheet combined.
@@ -32,3 +38,4 @@ Topic-wise solutions following Striver's A2Z DSA Sheet.
 ## 🌐 Connect
 - [LinkedIn](https://www.linkedin.com/in/sheema-shariq-436678366)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/profile/sheemash17x8)
+- [LeetCode](https://leetcode.com/u/SHEEMA_SHARIQ)
