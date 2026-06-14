@@ -19,7 +19,7 @@ public:
             {
                 cout << i;
             }
-            cout << "\n";
+            cout << endl;
         }
     }
 };
