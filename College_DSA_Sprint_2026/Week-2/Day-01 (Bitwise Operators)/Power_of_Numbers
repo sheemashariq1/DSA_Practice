@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    int reverseExponentiation(int n)
+    {
+        // code here
+        int org = n;
+        int rev = 0;
+        while (n > 0)
+        {
+            rev = rev * 10 + (n % 10);
+            n /= 10;
+        }
+        int res = 1;
+        long long m = 1000000007;
+        for (int i = 1; i <= rev; i++)
+        {
+            res = (res * org) % m;
+        }
+        return res;
+    }
+};
