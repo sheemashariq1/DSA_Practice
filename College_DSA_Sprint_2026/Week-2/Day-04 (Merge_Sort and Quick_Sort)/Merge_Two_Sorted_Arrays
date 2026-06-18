@@ -1,0 +1,33 @@
+// Given two sorted arrays a[] and b[] of size n and m respectively, the task is to merge them in sorted order without using any extra space.
+// Modify a[] so that it contains the first n elements and modify b[] so that it contains the last m elements.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    void mergeArrays(vector<int> &a, vector<int> &b)
+    {
+        // code here
+        int n = a.size();
+        int m = b.size();
+        int i = n - 1;
+        int j = 0;
+        while (i >= 0 && j < m)
+        {
+            if (a[i] > b[j])
+            {
+                std::swap(a[i], b[j]);
+                i--;
+                j++;
+            }
+            else
+            {
+                break;
+            }
+        }
+        std::sort(a.begin(), a.end());
+        std::sort(b.begin(), b.end());
+    }
+};
