@@ -1,0 +1,41 @@
+// You are given a matrix mat[][] . Return the boundary traversal on the matrix in a clockwise manner starting from the first row of the matrix.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    vector<int> boundaryTraversal(vector<vector<int>> &mat)
+    {
+        // code here
+        vector<int> result;
+        int n = mat.size();
+        if (n == 0)
+            return result;
+        int m = mat[0].size();
+        for (int j = 0; j < m; j++)
+        {
+            result.push_back(mat[0][j]);
+        }
+        for (int i = 1; i < n; i++)
+        {
+            result.push_back(mat[i][m - 1]);
+        }
+        if (n > 1)
+        {
+            for (int j = m - 2; j >= 0; j--)
+            {
+                result.push_back(mat[n - 1][j]);
+            }
+        }
+        if (m > 1)
+        {
+            for (int i = n - 2; i > 0; i--)
+            {
+                result.push_back(mat[i][0]);
+            }
+        }
+        return result;
+    }
+};
