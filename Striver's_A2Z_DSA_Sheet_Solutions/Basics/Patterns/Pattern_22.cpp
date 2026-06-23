@@ -28,7 +28,7 @@ public:
                 int bottom = (2 * n - 2) - i;
                 int right = (2 * n - 2) - j;
 
-                cout << (n - min(min(top, bottom), min(left, right)));
+                cout << (n - min(min(top, bottom), min(left, right))) << " ";
             }
             cout << endl;
         }
