@@ -1,0 +1,25 @@
+// A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.
+// Alphanumeric characters include letters and numbers.
+// Given a string s, return true if it is a palindrome, or false otherwise.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    bool isPalindrome(string s)
+    {
+        string clr = "";
+        for (char ch : s)
+        {
+            if (isalnum(ch))
+            {
+                clr += tolower(ch);
+            }
+        }
+        string rev = clr;
+        reverse(rev.begin(), rev.end());
+        return clr == rev;
+    }
+};
