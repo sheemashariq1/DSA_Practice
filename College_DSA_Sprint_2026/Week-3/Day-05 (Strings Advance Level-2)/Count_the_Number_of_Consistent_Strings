@@ -1,0 +1,31 @@
+// You are given a string allowed consisting of distinct characters and an array of strings words.
+// A string is consistent if all characters in the string appear in the string allowed.
+// Return the number of consistent strings in the array words.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    int countConsistentStrings(string allowed, vector<string> &words)
+    {
+        int count = 0;
+        for (string word : words)
+        {
+            int found = 1;
+            for (char c : word)
+            {
+                if (allowed.find(c) == string::npos)
+                {
+                    found = 0;
+                }
+            }
+            if (found == 1)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+};
