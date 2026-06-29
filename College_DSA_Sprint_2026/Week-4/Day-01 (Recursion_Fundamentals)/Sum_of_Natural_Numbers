@@ -1,0 +1,23 @@
+// Given an integer n, compute the sum of all natural numbers from 1 to n (inclusive).
+//  If n is 0, the sum should be 0.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    int sum = 0;
+    // code here
+    for (int i = 1; i <= n; i++)
+    {
+        sum += i;
+    }
+    cout << sum;
+
+    return 0;
+}

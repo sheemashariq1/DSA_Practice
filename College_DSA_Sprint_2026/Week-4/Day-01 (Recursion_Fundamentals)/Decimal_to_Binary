@@ -1,0 +1,24 @@
+// Given a decimal integer n, convert it and return its binary equivalent as a string.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    string decToBinary(int n)
+    {
+        // code here
+        string result = "";
+        while (n > 0)
+        {
+            if (n % 2 == 0)
+                result += "0";
+            else
+                result += "1";
+            n /= 2;
+        }
+        reverse(result.begin(), result.end());
+        return result;
+    }
+};
