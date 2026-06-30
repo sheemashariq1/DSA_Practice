@@ -1,0 +1,22 @@
+// Given an integer array arr[], return the sum of all elements of arr.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    int sum_of_array(vector<int> &arr, int element)
+    {
+        if (element == arr.size())
+        {
+            return 0;
+        }
+        return arr[element] + sum_of_array(arr, element + 1);
+    }
+    int arraySum(vector<int> &arr)
+    {
+        // code here
+        return sum_of_array(arr, 0);
+    }
+};
