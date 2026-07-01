@@ -1,0 +1,17 @@
+// Given a sorted array, arr[] and a number target, you need to find the number of occurrences of target in arr[].
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to count the number of occurrences of target in an array
+int countFreq(int arr[], int n, int target)
+{
+    // code here..
+    if (n == 0)
+        return 0;
+    if (arr[n - 1] == target)
+    {
+        return 1 + countFreq(arr, n - 1, target);
+    }
+    return countFreq(arr, n - 1, target);
+}
