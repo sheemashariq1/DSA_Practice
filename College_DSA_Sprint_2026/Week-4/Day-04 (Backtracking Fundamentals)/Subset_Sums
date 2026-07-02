@@ -1,0 +1,27 @@
+// Given an array arr of integers, return the sums of all subsets in the list.
+// Return the sums in any order.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    void solve(int index, int sum, vector<int> &arr, vector<int> &result)
+    {
+        if (index == arr.size())
+        {
+            result.push_back(sum);
+            return;
+        }
+        solve(index + 1, sum + arr[index], arr, result);
+        solve(index + 1, sum, arr, result);
+    }
+    vector<int> subsetSums(vector<int> &arr)
+    {
+        // code here
+        vector<int> result;
+        solve(0, 0, arr, result);
+        return result;
+    }
+};
