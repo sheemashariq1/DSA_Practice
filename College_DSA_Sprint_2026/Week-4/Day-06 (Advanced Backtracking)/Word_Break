@@ -1,0 +1,35 @@
+// Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+// Note that the same word in the dictionary may be reused multiple times in the segmentation.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+    bool wordBreak(string s, vector<string> &wordDict)
+    {
+        unordered_set<string> wordSet(wordDict.begin(), wordDict.end());
+        int maxlength = 0;
+        for (const string &word : wordDict)
+        {
+            maxlength = max(maxlength, (int)word.length());
+        }
+        int n = s.length();
+        vector<bool> dp(n + 1, false);
+        dp[0] = true;
+
+        for (int i = 1; i <= n; ++i)
+        {
+            for (int j = i - 1; j >= max(0, i - maxlength); j--)
+            {
+                if (dp[j] && wordSet.count(s.substr(j, i - j)))
+                {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[n];
+    }
+};
