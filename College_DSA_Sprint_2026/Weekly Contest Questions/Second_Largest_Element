@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n;
+    if (cin >> n)
+    {
+        vector<int> arr(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        // Write your code here
+        int max_val = arr[0];
+        int second_max = -1;
+        bool found_second = false;
+        for (int i = 1; i < n; i++)
+        {
+            if (arr[i] > max_val)
+            {
+                second_max = max_val;
+                max_val = arr[i];
+                found_second = true;
+            }
+            else if (arr[i] < max_val)
+            {
+                if (!found_second || arr[i] > second_max)
+                {
+                    second_max = arr[i];
+                    found_second = true;
+                }
+            }
+        }
+        cout << second_max;
+    }
+    return 0;
+}

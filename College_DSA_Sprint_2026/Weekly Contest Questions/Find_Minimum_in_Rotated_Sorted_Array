@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n;
+    if (cin >> n)
+    {
+        vector<int> arr(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        // Write your code here to find the minimum element
+        int low = 0;
+        int high = n - 1;
+        while (low < high)
+        {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] > arr[high])
+            {
+                low = mid + 1;
+            }
+            else
+            {
+                high = mid;
+            }
+        }
+        cout << arr[low];
+    }
+    return 0;

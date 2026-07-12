@@ -1,0 +1,54 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int m, n, r, c;
+    if (cin >> m >> n >> r >> c)
+    {
+        vector<vector<int>> mat(m, vector<int>(n));
+        for (int i = 0; i < m; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                cin >> mat[i][j];
+            }
+        }
+        // Write your code here
+        if (m * n != r * c)
+        {
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    cout << mat[i][j] << (j == n - 1 ? "" : " ");
+                }
+                cout << "\n";
+            }
+        }
+        else
+        {
+            int count = 0;
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    cout << mat[i][j];
+                    count++;
+                    if (count % c == 0)
+                    {
+                        cout << "\n";
+                    }
+                    else
+                    {
+                        cout << " ";
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}

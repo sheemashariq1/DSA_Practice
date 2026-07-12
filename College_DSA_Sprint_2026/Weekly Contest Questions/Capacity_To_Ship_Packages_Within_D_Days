@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n, days;
+    if (cin >> n >> days)
+    {
+        vector<int> arr(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        // Write your code here to find least weight capacity
+        int low = 0, high = 0;
+        for (int weight : arr)
+        {
+            low = max(low, weight);
+            high += weight;
+        }
+        int result = high;
+        while (low <= high)
+        {
+            int cdays = 1;
+            int weight1 = 0;
+            int mid = low + (high - low) / 2;
+            for (int weight : arr)
+            {
+                if (weight1 + weight > mid)
+                {
+                    cdays++;
+                    weight1 = 0;
+                }
+                weight1 += weight;
+            }
+            if (cdays <= days)
+            {
+                result = mid;
+                high = mid - 1;
+            }
+            else
+            {
+                low = mid + 1;
+            }
+        }
+        cout << result;
+    }
+    return 0;
+}

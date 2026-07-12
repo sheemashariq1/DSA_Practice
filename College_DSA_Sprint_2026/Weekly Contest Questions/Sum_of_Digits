@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+// Write C++ code here
+void solve()
+{
+    int N;
+    cin >> N;
+    int sum = 0;
+    int rem;
+    while (N > 0)
+    {
+        rem = N % 10;
+        sum += rem;
+        N /= 10;
+    }
+    cout << sum;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    solve();
+    return 0;
+}
