@@ -10,8 +10,8 @@ Solving problems daily in C++ & Python for placement preparation.
 ## 📂 Repository Structure
 
 ### 🏫 College_DSA_Sprint_2026/
-50-day DSA challenge organized by the Coding Council @ Jamia Millia Islamia.
-Daily problem sets covering core DSA topics — taught and practiced every day till Day 50.
+6-Weeks DSA challenge organized by the Coding Council @ Jamia Millia Islamia.
+Daily problem sets covering core DSA topics — taught and practiced every day.
 
 ### 📘 Striver's_A2Z_DSA_Sheet_Solutions/
 Topic-wise solutions following Striver's A2Z DSA Sheet.
