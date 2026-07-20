@@ -1,5 +1,5 @@
 // Given an array nums of size n which may contain duplicate elements.
-// Rreturn a list of pairs where each pair contains a unique element from the array and its frequency in the array.
+// Return a list of pairs where each pair contains a unique element from the array and its frequency in the array.
 // You may return the result in any order, but each element must appear exactly once in the output.
 
 #include <bits/stdc++.h>
@@ -8,16 +8,26 @@ using namespace std;
 class Solution
 {
 public:
-    void countingFrequencies(vector<int> &arr)
+    vector<vector<int>> countFrequencies(vector<int> &nums)
     {
-        unordered_map<int, int> freq;
-        for (int x : arr)
+        int maximum = 0;
+        for (int num : nums)
         {
-            freq[x]++;
+            maximum = max(maximum, num);
         }
-        for (auto &pair : freq)
+        vector<int> hash(maximum + 1, 0);
+        for (int num : nums)
         {
-            cout << pair.first << " " << pair.second << endl;
+            hash[num]++;
         }
+        vector<vector<int>> ans;
+        for (int i = 0; i <= maximum; i++)
+        {
+            if (hash[i] > 0)
+            {
+                ans.push_back({i, hash[i]});
+            }
+        }
+        return ans;
     }
 };
