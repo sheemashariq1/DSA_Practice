@@ -18,7 +18,7 @@ Topic-wise solutions following Striver's A2Z DSA Sheet.
 
 ## 🔗 Resources
 - [Striver's A2Z DSA Sheet](https://takeuforward.org/dsa/strivers-a2z-sheet-learn-dsa-a-to-z)
-- [GFG DSA Course] - GeeksforGeeks Practice Questions
+- College DSA Sprint - Questions from LeetCode and GeeksForGeeks.
 
 ## 📈 Topics Progress
 - [ ] Arrays
