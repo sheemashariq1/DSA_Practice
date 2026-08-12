@@ -12,22 +12,22 @@ public:
         int n = nums.size();
         if (n == 0)
             return;
-        int i = 0;
-        for (int j = 0; j < n; j++)
+        int j = -1;
+        for (int i = 0; i < n; i++)
         {
-            if (nums[j] != 0)
+            if (nums[i] == 0)
             {
-                nums[i] = nums[j];
-                i++;
+                j = i;
+                break;
             }
         }
-        while (i < n)
+        for (int i = j + 1; i < n; i++)
         {
-            nums[i] = 0;
-            i++;
+            if (nums[i] != 0)
+            {
+                swap(nums[i], nums[j]);
+                j++;
+            }
         }
     }
 };
-
-
-
