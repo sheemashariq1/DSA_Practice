@@ -12,6 +12,8 @@ Solving problems daily in C++ & Python for placement preparation.
 ### 🏫 College_DSA_Sprint_2026/
 6-Weeks DSA challenge organized by the Coding Council @ Jamia Millia Islamia.
 Daily problem sets covering core DSA topics — taught and practiced every day.
+## 🏅 Certificate of Participation
+   ![DSA Sprint 2026 Certificate](College_DSA_Sprint_2026/Certificate.png)
 
 ### 📘 Striver's_A2Z_DSA_Sheet_Solutions/
 Topic-wise solutions following Striver's A2Z DSA Sheet.
